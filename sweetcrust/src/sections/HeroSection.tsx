@@ -39,7 +39,7 @@ const HeroSection: React.FC = () => {
           inactiveTransition="transform 0.6s ease-in-out"
         >
           <img
-            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800"
+            src="/images/cake-1.jpg"
             alt="Artisan chocolate cake"
             className="w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] rounded-full object-cover shadow-2xl"
           />

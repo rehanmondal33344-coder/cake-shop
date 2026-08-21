@@ -20,11 +20,9 @@ const projects: ProjectData[] = [
     flavor: 'Signature',
     name: 'Midnight Chocolate Truffle',
     images: {
-      col1Top:
-        'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80',
-      col1Bottom:
-        'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=800&q=80',
-      col2: 'https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=1200&q=80',
+      col1Top: '/images/cake-23.jpg',
+      col1Bottom: '/images/cake-24.jpg',
+      col2: '/images/cake-25.jpg',
     },
   },
   {
@@ -32,11 +30,9 @@ const projects: ProjectData[] = [
     flavor: 'Popular',
     name: 'Berry Chantilly Lace',
     images: {
-      col1Top:
-        'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80',
-      col1Bottom:
-        'https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=800&q=80',
-      col2: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?auto=format&fit=crop&w=1200&q=80',
+      col1Top: '/images/cake-26.jpg',
+      col1Bottom: '/images/cake-27.jpg',
+      col2: '/images/cake-28.jpg',
     },
   },
   {
@@ -44,11 +40,9 @@ const projects: ProjectData[] = [
     flavor: 'Wedding',
     name: 'Golden Vanilla Bliss',
     images: {
-      col1Top:
-        'https://images.unsplash.com/photo-1535141192574-5d4897c12636?auto=format&fit=crop&w=800&q=80',
-      col1Bottom:
-        'https://images.unsplash.com/photo-1557925923-33b251dc3296?auto=format&fit=crop&w=800&q=80',
-      col2: 'https://images.unsplash.com/photo-1602351447937-745cb7be3ab6?auto=format&fit=crop&w=1200&q=80',
+      col1Top: '/images/cake-29.jpg',
+      col1Bottom: '/images/cake-30.jpg',
+      col2: '/images/cake-31.jpg',
     },
   },
 ];
@@ -61,7 +55,7 @@ interface CardProps {
   targetScale: number;
 }
 
-const Card: React.FC<CardProps> = ({ project, index, range, targetScale }) => {
+const Card: React.FC<CardProps> = ({ project, index, targetScale }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
