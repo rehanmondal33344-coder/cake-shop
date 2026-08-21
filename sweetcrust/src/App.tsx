@@ -1,20 +1,24 @@
-import HeroSection from './sections/HeroSection';
-import MarqueeSection from './sections/MarqueeSection';
-import StorySection from './sections/StorySection';
-import CategoriesSection from './sections/CategoriesSection';
-import BestSellersSection from './sections/BestSellersSection';
-import GallerySection from './sections/GallerySection';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './pages/Home';
+import MenuPage from './pages/MenuPage';
+import CategoriesPage from './pages/CategoriesPage';
+import GalleryPage from './pages/GalleryPage';
+import ServicesPage from './pages/ServicesPage';
 
 function App() {
   return (
-    <div className="bg-[#0C0C0C] font-kanit" style={{ overflowX: 'clip' }}>
-      <HeroSection />
-      <MarqueeSection />
-      <StorySection />
-      <CategoriesSection />
-      <BestSellersSection />
-      <GallerySection />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="menu" element={<MenuPage />} />
+          <Route path="categories" element={<CategoriesPage />} />
+          <Route path="gallery" element={<GalleryPage />} />
+          <Route path="services" element={<ServicesPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

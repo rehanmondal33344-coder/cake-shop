@@ -3,25 +3,12 @@ import FadeIn from '../components/FadeIn';
 import OrderButton from '../components/OrderButton';
 import Magnet from '../components/Magnet';
 
-const navLinks = ['Menu', 'Categories', 'Best Sellers', 'Order Now'];
+
 
 const HeroSection: React.FC = () => {
   return (
     <section className="h-screen flex flex-col relative" style={{ overflowX: 'clip' }}>
-      {/* Navbar */}
-      <FadeIn delay={0} y={-20}>
-        <nav className="flex justify-between px-6 md:px-10 pt-6 md:pt-8">
-          {navLinks.map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem] hover:opacity-70 transition-opacity duration-200"
-            >
-              {link}
-            </a>
-          ))}
-        </nav>
-      </FadeIn>
+      <div className="pt-24 sm:pt-32" />
 
       {/* Hero Heading */}
       <FadeIn delay={0.15} y={40} className="overflow-hidden mt-6 sm:mt-4 md:-mt-5">
