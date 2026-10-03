@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install Project Dependencies
         run: |
@@ -30,10 +30,7 @@ jobs:
 
       - name: Deploy Compiled Files to Apache Web Server
         run: |
-          # Clear old production deployment
-          sudo rm -rf /var/www/html/*
-          # Copy fresh production compilation files
-          sudo cp -r sweetcrust/dist/* /var/www/html/
-          # Readjust Apache access permissions
-          sudo chown -R www-data:www-data /var/www/html/
-          sudo chmod -R 755 /var/www/html/
+          # Clear old production deployment without sudo
+          rm -rf /var/www/html/*
+          # Copy fresh production compilation files without sudo
+          cp -r sweetcrust/dist/* /var/www/html/
