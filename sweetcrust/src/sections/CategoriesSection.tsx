@@ -6,7 +6,7 @@ const categories = [
     number: '01',
     name: 'Signature Cakes',
     description:
-      'Multi-tiered masterpieces tailored to specific celebrations, ideal for weddings, anniversaries, and grand parties.',
+      'okkk gitgub actions.',
   },
   {
     number: '02',
